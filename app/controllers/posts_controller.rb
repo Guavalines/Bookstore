@@ -37,6 +37,11 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   def destroy
     @post.destroy
+
+    respond_to do |format|
+      format.html { redirect_to posts_url, notice: 'Post was successful'}
+      format.json { render json: Post.all, status: :ok }
+    end
   end
 
   private
