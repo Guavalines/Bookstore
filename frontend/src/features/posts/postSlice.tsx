@@ -10,7 +10,20 @@ export enum Statuses {
   Error = "Error"
 }
 
-const initialState: any = {
+export interface PostState {
+  id?: number;
+  title?: string;
+  body?: string;
+  created_at?: any;
+  updated_at?: any;
+}
+
+export interface PostsState {
+  posts: PostState[];
+  status: string;
+}
+
+const initialState: PostsState = {
   posts: [
     {
       id: 0,
