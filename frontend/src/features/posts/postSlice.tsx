@@ -35,3 +35,21 @@ const initialState: PostsState = {
   ],
   status: Statuses.Initial
 }
+
+export const postSlice = createSlice({
+  name: "posts",
+  initialState,
+  /**
+   * Synchronous actions
+   */
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+        .addCase(fetchPostsAsync.pending)
+
+        .addCase(fetchPostsAsync.fulfilled)
+
+        .addCase(fetchPostsAsync.error)
+  }
+
+})
