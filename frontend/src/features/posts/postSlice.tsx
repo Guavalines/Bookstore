@@ -53,11 +53,15 @@ export const postSlice = createSlice({
 
         .addCase(fetchPostsAsync.fulfilled, (state) => {
           return produce(state, (draftState) => {
-
+            draftState.status = Statuses.UpToDate;
           })
         })
 
-        .addCase(fetchPostsAsync.error)
+        .addCase(fetchPostsAsync.pending, (state) => {
+          return produce(state, (draftState) => {
+
+          })
+        })
   }
 
 })
