@@ -51,7 +51,11 @@ export const postSlice = createSlice({
           })
         })
 
-        .addCase(fetchPostsAsync.fulfilled)
+        .addCase(fetchPostsAsync.fulfilled, (state) => {
+          return produce(state, (draftState) => {
+
+          })
+        })
 
         .addCase(fetchPostsAsync.error)
   }
