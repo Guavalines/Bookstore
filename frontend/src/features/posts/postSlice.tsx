@@ -47,7 +47,7 @@ export const postSlice = createSlice({
     builder
         .addCase(fetchPostsAsync.pending, (state) => {
           return produce(state, (draftState) => {
-
+            draftState.status = Statuses.Loading;
           })
         })
 
