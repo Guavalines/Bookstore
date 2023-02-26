@@ -45,7 +45,11 @@ export const postSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-        .addCase(fetchPostsAsync.pending)
+        .addCase(fetchPostsAsync.pending, (state) => {
+          return produce(state, (draftState) => {
+
+          })
+        })
 
         .addCase(fetchPostsAsync.fulfilled)
 
