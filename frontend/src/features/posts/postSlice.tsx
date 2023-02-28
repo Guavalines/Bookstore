@@ -61,5 +61,6 @@ export const postSlice = createSlice({
           })
         })
   }
-
 })
+
+export const {} = postSlice.actions;
