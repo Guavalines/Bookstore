@@ -50,16 +50,14 @@ export const postSlice = createSlice({
             draftState.status = Statuses.Loading;
           })
         })
-
         .addCase(fetchPostsAsync.fulfilled, (state) => {
           return produce(state, (draftState) => {
             draftState.status = Statuses.UpToDate;
           })
         })
-
         .addCase(fetchPostsAsync.pending, (state) => {
           return produce(state, (draftState) => {
-
+            draftState.status = Statuses.Error;
           })
         })
   }
