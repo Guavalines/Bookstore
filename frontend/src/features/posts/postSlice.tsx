@@ -68,3 +68,5 @@ export const {} = postSlice.actions;
 export const selectPosts = (state: RootState) => state.posts.posts;
 
 export const selectStatus = (state: RootState) => state.posts.status;
+
+export default postSlice.reducer;
