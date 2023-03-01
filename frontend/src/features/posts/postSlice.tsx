@@ -36,6 +36,15 @@ const initialState: PostsState = {
   status: Statuses.Initial
 }
 
+export const fetchPostsAsync = createAsyncThunk(
+  'posts/fetchPosts',
+  async () => {
+    const response = await fetchPosts();
+    return response;
+  }
+)
+
+
 export const postSlice = createSlice({
   name: "posts",
   initialState,
