@@ -8,5 +8,5 @@ export async function fetchPosts() {
     headers: {
       "Content-Type": "application/json",
     },
-  })
+  }).then((response) => response.json());
 }
