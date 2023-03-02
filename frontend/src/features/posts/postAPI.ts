@@ -1,4 +1,4 @@
-import { PostState} from "./postSlice"
+import { PostsState, PostState} from "./postSlice"
 
 const API_URL = "http://localhost:3000";
 
@@ -8,5 +8,9 @@ export async function fetchPosts() {
     headers: {
       "Content-Type": "application/json",
     },
-  }).then((response) => response.json());
+  }).then((response) => response.json())
+  .catch((error) => {
+    console.log("Error: ", error);
+    return {} as PostsState;
+  });
 }
