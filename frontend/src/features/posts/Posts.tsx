@@ -13,9 +13,17 @@ function Posts() {
 
   let contents;
 
-  if (status !== Statuses.upToDate) {}
+  if (status !== Statuses.upToDate) {
+    contents = <div>{status}</div>
+  } else {
+    contents = <div className="card">
+      <div className="card-body">
 
-  return <div><h1>Posts</h1></div>;
+      </div>
+    </div>
+  }
+
+  return <div><h1>Posts</h1></div>
 }
 
 export default Posts;
