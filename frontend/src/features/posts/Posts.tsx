@@ -18,7 +18,14 @@ function Posts() {
   } else {
     contents = <div className="card">
       <div className="card-body">
-        <h5 className="card-title">Posts</h5>
+        <h3>{status}</h3>
+        {/** form goes here */}
+        {posts && posts.length > 0 && posts.map(post => {
+          return <div key={post.id} style={{margin:"5em"}}>
+            <h3>{post.title}</h3>
+            <p>{post.body}</p>
+          </div>
+        })}
       </div>
     </div>
   }
