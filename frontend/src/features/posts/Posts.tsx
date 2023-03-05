@@ -22,8 +22,10 @@ function Posts() {
         {/** form goes here */}
         {posts && posts.length > 0 && posts.map(post => {
           return <div key={post.id} style={{margin:"5em"}}>
-            <h3>{post.title}</h3>
-            <p>{post.body}</p>
+            <Post
+              dispatch={dispatch}
+              post={post}
+            />
           </div>
         })}
       </div>

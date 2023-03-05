@@ -66,7 +66,7 @@ export const postSlice = createSlice({
             draftState.status = Statuses.UpToDate;
           })
         })
-        .addCase(fetchPostsAsync.pending, (state) => {
+        .addCase(fetchPostsAsync.rejected, (state) => {
           return produce(state, (draftState) => {
             draftState.status = Statuses.Error;
           })
