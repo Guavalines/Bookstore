@@ -6,7 +6,16 @@ function Post(props:any){
 
     const titleElement = <h2 className="title text-start">{props.post.title}</h2>;
     const bodyElement = <p className="card-text text-start">{props.post.body}</p>;
-  return <div>Post</div>;
+  return <div>
+    <div className="row">
+      <div className="col-8">
+        {titleElement}
+      </div>
+      <div className="col-4">
+
+      </div>
+    </div>
+  </div>;
 }
 
 export default Post;
