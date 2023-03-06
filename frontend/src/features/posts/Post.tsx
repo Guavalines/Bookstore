@@ -20,6 +20,11 @@ function Post(props:any){
           {bodyElement}
         </div>
       </div>
+      <div className="row">
+        <div className="col-2">
+            {/** Edit Submit Button */}
+        </div>
+      </div>
   </div>;
 }
 
