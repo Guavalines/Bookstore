@@ -12,9 +12,14 @@ function Post(props:any){
         {titleElement}
       </div>
       <div className="col-4">
-
+        {/** Button Group */}
       </div>
     </div>
+      <div className="row">
+        <div className="col-8">
+          {bodyElement}
+        </div>
+      </div>
   </div>;
 }
 
