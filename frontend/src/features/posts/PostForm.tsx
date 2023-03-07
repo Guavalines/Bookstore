@@ -6,7 +6,15 @@ function PostForm(){
   const [body, setBody] = useState('');
 
   function submitHandler(e) {
-
+    e.preventDefault();
+    const formData = {
+      post: {
+        title: title,
+        body: body,
+      }
+    }
+    dispatch(createPostAsync(formData));
+    resetState();
   }
 
   function resetState() {
