@@ -7,7 +7,7 @@ function PostForm(){
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
-  function submitHandler(e) {
+  function submitHandler(e:any) {
     e.preventDefault();
     const formData = {
       post: {
