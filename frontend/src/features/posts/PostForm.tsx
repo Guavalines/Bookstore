@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import {createPostAsync} from './postSlice';
 
 function PostForm(){
   const dispatch = useDispatch();
