@@ -45,6 +45,12 @@ export const fetchPostsAsync = createAsyncThunk(
   }
 )
 
+export const createPostAsync = createAsyncThunk(
+  'posts/createPost',
+  async (payload: PostFormData) => {
+
+  }
+)
 
 export const postSlice = createSlice({
   name: "posts",
