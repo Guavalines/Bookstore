@@ -5,7 +5,7 @@ function PostForm(){
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
-  function submitHandler() {
+  function submitHandler(e) {
 
   }
 
@@ -16,13 +16,23 @@ function PostForm(){
 
   return <div>
     <h1>PostForm</h1>
-    <form
-      input="text"
+    <form>
+      <input
+      type="text"
       className="form-control text-start"
       name="title"
       value={title}
       onChange={(e) => setTitle(e.target.value)}
       />
+    <textarea
+      className="form-control text-start"
+      name="body"
+      value={body}
+      onChange={(e) => setBody(e.target.value)}
+      />
+      <button
+        type="submit"
+        onClick={(e) => submitHandler(e)}>Submit</button>
     </form>
   </div>;
 }
