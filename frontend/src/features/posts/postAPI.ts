@@ -15,13 +15,12 @@ export async function fetchPosts() {
   });
 }
 
-export async function createPosts() {
+export async function createPosts(payload: PostFormData) {
+  const post = payload.post;
   return fetch('${API_URL}/posts.json', {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }).then((response) => response.json())
+
+  })
+  .then((response) => response.json())
   .catch((error) => {
     console.log("Error: ", error);
     return {} as PostsState;
