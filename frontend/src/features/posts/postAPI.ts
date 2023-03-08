@@ -14,3 +14,16 @@ export async function fetchPosts() {
     return {} as PostsState;
   });
 }
+
+export async function createPosts() {
+  return fetch('${API_URL}/posts.json', {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((response) => response.json())
+  .catch((error) => {
+    console.log("Error: ", error);
+    return {} as PostsState;
+  });
+}
