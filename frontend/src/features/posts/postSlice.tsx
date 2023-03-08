@@ -11,6 +11,14 @@ export enum Statuses {
   Error = "Error"
 }
 
+export interface PostFormData {
+  post: {
+    id?: string;
+    title: string;
+    body: string;
+  }
+}
+
 export interface PostState {
   id?: number;
   title?: string;
