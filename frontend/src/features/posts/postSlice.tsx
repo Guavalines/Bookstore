@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import produce from "immer";
 import { RootState } from "../../app/store"
-import { fetchPosts } from './postAPI'
+import { fetchPosts, createPost } from './postAPI'
 
 export enum Statuses {
   Initial = "Not Fetched",
@@ -56,7 +56,9 @@ export const fetchPostsAsync = createAsyncThunk(
 export const createPostAsync = createAsyncThunk(
   'posts/createPost',
   async (payload: PostFormData) => {
+    const response = await createPost(payload);
 
+    return response;
   }
 )
 
