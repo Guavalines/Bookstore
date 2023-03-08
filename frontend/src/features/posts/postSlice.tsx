@@ -87,6 +87,24 @@ export const postSlice = createSlice({
             draftState.status = Statuses.Error;
           })
         })
+        /** Update Section */
+        .addCase(createPostsAsync.pending, (state) => {
+          return produce(state, (draftState) => {
+            draftState.posts.push(action.payload);
+            draftState.status = Statuses.Loading;
+          })
+        })
+        .addCase(createPostsAsync.fulfilled, (state, action) => {
+          return produce(state, (draftState) => {
+            draftState.posts = action.payload;
+            draftState.status = Statuses.UpToDate;
+          })
+        })
+        .addCase(createPostsAsync.rejected, (state) => {
+          return produce(state, (draftState) => {
+            draftState.status = Statuses.Error;
+          })
+        })
   }
 })
 
