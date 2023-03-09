@@ -74,7 +74,11 @@ export const createPostAsync = createAsyncThunk(
 )
 export const destroyPostAsync = createAsyncThunk(
   'posts/destroyPost',
-  async (payload: PostDeleteData) => {}
+  async (payload: PostDeleteData) => {
+    const response = await destroyPostAsync(payload);
+
+    return response;
+  }
 )
 
 export const postSlice = createSlice({
