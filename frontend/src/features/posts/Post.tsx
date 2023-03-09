@@ -12,7 +12,10 @@ function Post(props:any){
         {titleElement}
       </div>
       <div className="col-4">
-        {/** Button Group */}
+        <ButtonGroup
+          post_id={props.post.id}
+          dispatch={props.dispatch}
+
       </div>
     </div>
       <div className="row">
