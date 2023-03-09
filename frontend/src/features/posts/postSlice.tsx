@@ -32,6 +32,17 @@ export interface PostsState {
   status: string;
 }
 
+export interface PostUpdateData {
+  post_id: number;
+  post: PostState;
+}
+
+export interface PostDeleteData {
+  post: {
+    post_id: number;
+  }
+}
+
 const initialState: PostsState = {
   posts: [
     {
@@ -60,6 +71,10 @@ export const createPostAsync = createAsyncThunk(
 
     return response;
   }
+)
+export const destroyPostAsync = createAsyncThunk(
+  'posts/destroyPost',
+  async (payload: PostDeleteData) => {}
 )
 
 export const postSlice = createSlice({
