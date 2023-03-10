@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ButtonGroup from '.ButtonGroup';
 
 function Post(props:any){
     const [title, setTitle] = useState(props.post.title);
@@ -15,6 +16,7 @@ function Post(props:any){
         <ButtonGroup
           post_id={props.post.id}
           dispatch={props.dispatch}
+        />
 
       </div>
     </div>
