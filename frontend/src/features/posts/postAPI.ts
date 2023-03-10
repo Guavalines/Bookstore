@@ -26,3 +26,20 @@ export async function createPosts(payload: PostFormData) {
     return {} as PostsState;
   });
 }
+
+export async function destroyPost(payload: PostDeleteData) {
+  const post = payload.post;
+  return fetch(`${API_URL}/posts/${post.post_id}.json`, {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      post,
+    }),
+  }).then((response) => response.json())
+    .catch((error)) => {
+      console.log("Error: ", error);
+      return {} as PostsState;
+    }
+}
