@@ -7,6 +7,12 @@ function Post(props:any){
 
     const titleElement = <h2 className="title text-start">{props.post.title}</h2>;
     const bodyElement = <p className="card-text text-start">{props.post.body}</p>;
+
+    const editableTitle = <input
+                            type="text"
+                            className="form-control text-start"
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}/>;
   return <div>
     <div className="row">
       <div className="col-8">
