@@ -13,6 +13,10 @@ function Post(props:any){
                             className="form-control text-start"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}/>;
+    const editableBody = <textarea
+                           className="form-control text-start"
+                           value={body}
+                           onChange={(e) => setBody(e.target.value)} />;
   return <div>
     <div className="row">
       <div className="col-8">
