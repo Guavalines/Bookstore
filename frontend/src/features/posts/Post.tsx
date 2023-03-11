@@ -17,6 +17,10 @@ function Post(props:any){
                            className="form-control text-start"
                            value={body}
                            onChange={(e) => setBody(e.target.value)} />;
+    const submitButton = <button
+                           type="submit"
+                           className="form-control"
+                           onClick={(e) => submitHandler(e)}>Submit</button>;
   return <div>
     <div className="row">
       <div className="col-8">
