@@ -25,21 +25,22 @@ class PostsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /posts/1
+  # PATCH/PUT /posts/1 or /posts/1.json
   def update
     if @post.update(post_params)
       render json: @post
     else
-      render json: @post.errors, status: :unprocessable_entity
+      format.html { render :edit, status: :unprocessable_entity }
+      format.json { render json: @post.errors, status: :unprocessable_entity }
     end
   end
 
-  # DELETE /posts/1
+  # DELETE /posts/1 or /posts/1.json
   def destroy
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successful'}
+      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.'}
       format.json { render json: Post.all, status: :ok }
     end
   end
