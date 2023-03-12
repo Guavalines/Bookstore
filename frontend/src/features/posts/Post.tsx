@@ -18,6 +18,10 @@ function Post(props:any){
       resetState();
     }
 
+    function resetState() {
+      setTitle(props.post.title);
+      setBody(props.post.body);
+    }
 
     const titleElement = <h2 className="title text-start">{props.post.title}</h2>;
     const bodyElement = <p className="card-text text-start">{props.post.body}</p>;
