@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ButtonGroup from '.ButtonGroup';
 
 function Post(props:any){
     const [title, setTitle] = useState(props.post.title);
     const [body, setBody] = useState(props.post.body);
+    const [isEditing, setIsEditing] = useState(props.postToEdit === props.post.id);
+    useEffect(() => {
+      setIsEditing(props.postToEdit === props.post.id);
+    }, [props.postToEdit, props.post.id])
 
     function submitHandler(e:any) {
       e.preventDefault();
@@ -42,7 +46,7 @@ function Post(props:any){
   return <div>
     <div className="row">
       <div className="col-8">
-        {titleElement}
+        {isEditing ? editableTitle : titleElement}
       </div>
       <div className="col-4">
         <ButtonGroup
@@ -54,12 +58,12 @@ function Post(props:any){
     </div>
       <div className="row">
         <div className="col-8">
-          {bodyElement}
+          {isEditing ? editableBody : bodyElement}
         </div>
       </div>
       <div className="row">
         <div className="col-2">
-            {/** Edit Submit Button */}
+            {isEditing ? editableBody : bodyElement}
         </div>
       </div>
   </div>;
