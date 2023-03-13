@@ -13,10 +13,18 @@ function Posts() {
     dispatch(fetchPostsAsync());
   }, [dispatch])
 
-  function toggleEditForm(post_id?:number) {}
+  function toggleEditForm(post_id?:number) {
     if (postToEdit === post_id) {
       setPostToEdit(0);
+    } else {
+          setPostToEdit(post_id as number);
     }
+  }
+
+  function submitEdit(formData:any) {
+    dispatch(updatePostAsync(formData));
+    toggleEditForm();
+  }
 
   let contents;
 
@@ -32,6 +40,9 @@ function Posts() {
             <Post
               dispatch={dispatch}
               post={post}
+              toggleEditForm = {() => toggleEditForm(post.id)}
+              postToEdit = {postToEdit}
+              submitEdit = {submitEdit}
             />
           </div>
         })}
