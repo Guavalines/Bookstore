@@ -7,9 +7,16 @@ function Posts() {
   const status = useAppSelector(selectStatus);
   const dispatch = useDispatch();
 
+  const [postToEdit, setPostToEdit] = useState(0);
+
   useEffect(() => {
     dispatch(fetchPostsAsync());
   }, [dispatch])
+
+  function toggleEditForm(post_id?:number) {}
+    if (postToEdit === post_id) {
+      setPostToEdit(0);
+    }
 
   let contents;
 
