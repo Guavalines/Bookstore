@@ -10,6 +10,11 @@ The React front-end has a Post component that can display a post's title and bod
 
 The project is built using TypeScript for static typing, which makes the codebase more robust and easier to maintain. The codebase follows best practices and is structured in a modular manner, making it easier to understand and debug.
 
+![Screen Shot 2023-03-24 at 10 59 22 PM](https://user-images.githubusercontent.com/100665876/227699826-4eb4646d-4bb5-4486-8a66-2b082348f132.jpeg)
+
+![Screen Shot 2023-03-24 at 10 59 32 PM](https://user-images.githubusercontent.com/100665876/227699851-968e3c01-dcaf-4742-81a0-f1b6594f7878.jpeg)
+
+![Screen Shot 2023-03-24 at 10 59 39 PM](https://user-images.githubusercontent.com/100665876/227699878-4427a32f-57ea-4199-a2ce-2b0b5a3c96f7.jpeg)
 
 
 
