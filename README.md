@@ -1,6 +1,6 @@
 # BOOKSTORE API
 
-This project is a bare bones web application built with React, Redux, and TypeScript on the front-end, and Ruby on Rails 7 on the back-end, using an API for communication. The project aims to implement the basic CRUD (Create, Read, Update, Delete) operations for blog posts.
+This is a bare bones web app built with React, Redux, and TypeScript on the front-end, and Ruby on Rails 7 on the back-end, using an API for communication. It aims to use the basic CRUD (Create, Read, Update, Delete) operations for blog posts.
 
 The Redux store has two reducers, counterReducer and postsReducer, and is configured with configureStore(). The store has three types defined: AppDispatch, RootState, and AppThunk.
 
