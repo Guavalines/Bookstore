@@ -22,3 +22,4 @@ This is a bare bones Rails 7 API React CRUD app, which is powered through ![Redu
  ```
  
  Open your browser and visit localhost:3000
+ To run the React side of things run npm start in your terminal
