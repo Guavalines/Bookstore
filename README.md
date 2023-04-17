@@ -1,7 +1,9 @@
 # BOOKSTORE API
 
+## Description
 This is a bare bones web app built with React, Redux, and TypeScript on the front-end, and Ruby on Rails 7 on the back-end, using an API for communication. It aims to use the basic CRUD (Create, Read, Update, Delete) operations for blog posts.
 
+## Features
 The Redux store has two reducers, counterReducer and postsReducer, and is configured with configureStore(). The store has three types defined: AppDispatch, RootState, and AppThunk.
 
 The Rails 7 API contains a posts table, which has the columns title, body, created_at, and updated_at. A posts resource is made accessible to all origins using the rack-cors gem.
