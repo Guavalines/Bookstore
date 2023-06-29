@@ -1,4 +1,4 @@
-# BOOKSTORE API 📚
+# 📚 BOOKSTORE API
 
 ## Description
 This is a bare bones web app built with React, Redux, and TypeScript on the front-end, and Ruby on Rails 7 on the back-end, using an API for communication.
